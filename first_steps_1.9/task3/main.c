@@ -2,14 +2,14 @@
 
 #define MAXLINE 1000
 
-int getline228 (char line[], int maxline);
+int getlinelength (char line[], int maxline);
 
 int main()
 {
     char line[MAXLINE];
     int len;
 
-    while(len = getline228(line, MAXLINE)){
+    while(len = getlinelength(line, MAXLINE)){
         for (int i = (len - 2); i > 0; i--){
             if (line[i] == '\t' || line[i] == ' '){
                     line[i] = 0;
@@ -24,16 +24,13 @@ int main()
             for (int j = 0; j < len; j++){
                 line[j] = 0;
             }
-        } else if ( len == EOF){
-            printf("%s", line);
-            break;
-        }
+        } 
     }
 
     return 0;
 }
 
-int getline228 (char s[], int lim)
+int getlinelength (char s[], int lim)
 {
     int c, i;
 

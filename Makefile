@@ -2,7 +2,7 @@
 
 # Compiler and flags
 CC := cc
-CFLAGS := -Wall -Wextra -O2
+CFLAGS := -Wall -Wextra -g
 
 # Find all main.c files
 SOURCES := $(wildcard first_steps*/*/main.c)
