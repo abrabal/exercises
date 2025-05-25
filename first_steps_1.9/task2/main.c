@@ -11,7 +11,7 @@ int main ()
     int len;
     char line[MAXLINE];
 
-    while (len = getlinelength(line, MAXLINE)){
+    while ((len = getlinelength(line, MAXLINE))){
         if( len > 80){
             printf("%s", line);
         }

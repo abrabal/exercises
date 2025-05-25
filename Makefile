@@ -5,7 +5,7 @@ CC := cc
 CFLAGS := -Wall -Wextra -g
 
 # Find all main.c files
-SOURCES := $(wildcard first_steps*/*/main.c)
+SOURCES := $(wildcard */*/main.c)
 
 # Map each main.c to its corresponding binary
 BINARIES := $(SOURCES:%.c=%)
