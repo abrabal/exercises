@@ -28,10 +28,10 @@ int main()
 
     //optimized version test
 
-    assert(invert_optimized(0b0, 5, 3) == 0b111000);
-    assert(invert_optimized(0b10100, 2, 1) == 0b10000);
-    assert(invert_optimized(0b11111, 6, 4) == 0b1100111);
-    assert(invert_optimized(0b111, 8, 3) == 0b111000111);
+    assert(invert_optimized(0b0, 5, 3) == invert(0b0, 5, 3));
+    assert(invert_optimized(0b10100, 2, 1) == invert(0b10100, 2, 1));
+    assert(invert_optimized(0b11111, 6, 4) == invert(0b11111, 6, 4));
+    assert(invert_optimized(0b111, 8, 3) == invert(0b111, 8, 3));
 
     return 0;
 }

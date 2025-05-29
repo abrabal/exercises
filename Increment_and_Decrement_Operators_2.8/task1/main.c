@@ -31,13 +31,18 @@ int main()
     char line1[LIMIT] = {0};
     char line2[LIMIT] = {0};
 
-    while (fgets(line1, sizeof(line1), stdin)){
-        fgets(line2, sizeof(line2), stdin);
+    while (1){
+        if (fgets(line1, sizeof(line1), stdin) == NULL){
+            break;
+        }
+        if (fgets(line2, sizeof(line2), stdin) == NULL){
+            break;
+        }
         squeeze(line1, line2);
         printf("%s\n", line1);
         memset(line1, 0, sizeof(line1));
         memset(line2, 0, sizeof(line2));
-
+        
     }
 
     return 0;

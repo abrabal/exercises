@@ -3,7 +3,7 @@
 
 #define LIMIT 1000
 
-int any(char string1[], char string2[]){
+int find_first_match(char string1[], char string2[]){
     int string1_length, string2_length;
 
     string1_length = strlen(string1);
@@ -25,9 +25,14 @@ int main()
     char str2[LIMIT] = {0};
     int number = 0;
 
-    while (fgets(str1, sizeof(str1), stdin)){
-        fgets(str2, sizeof(str2), stdin);
-        number = any(str1, str2);
+    while (1){
+        if (fgets(str1, sizeof(str1), stdin) == NULL){
+            break;
+        }
+        if (fgets(str2, sizeof(str2), stdin) == NULL){
+            break;
+        }
+        number = find_first_match(str1, str2);
         if (number == -1){
             printf("No coincidence\n");
         }else{
