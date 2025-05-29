@@ -9,7 +9,7 @@ int main()
     char line[MAXLINE];
     int len;
 
-    while(len = getlinelength(line, MAXLINE)){
+    while((len = getlinelength(line, MAXLINE))){
         for (int i = (len - 2); i > 0; i--){
             if (line[i] == '\t' || line[i] == ' '){
                     line[i] = 0;
