@@ -6,36 +6,46 @@
 
 void reverse(char s[])
 {
-int c, i, j;
-for (i = 0, j = strlen(s)-1; i < j; i++, j--) {
-c = s[i];
-s[i] = s[j];
-s[j] = c;
-}
+    int c, i, j;
+    for (i = 0, j = strlen(s) - 1; i < j; i++, j--)
+    {
+        c = s[i];
+        s[i] = s[j];
+        s[j] = c;
+    }
 }
 
-void num_to_string(int n, char string[], int b){
+void num_to_string(int n, char string[], int b)
+{
 
     unsigned int numb = 0;
     int i = 0;
 
-    if (n < 0){
+    if (n < 0)
+    {
         numb = -n;
-    } else {
+    }
+    else
+    {
         numb = n;
     }
 
-    do {
+    do
+    {
 
-        if (numb % b < 10){
+        if (numb % b < 10)
+        {
             string[i++] = numb % b + '0';
-        } else {
+        }
+        else
+        {
             string[i++] = ((numb % b) - 10) + 'A';
         }
 
     } while ((numb /= b) > 0);
 
-    if(n < 0){
+    if (n < 0)
+    {
         string[i++] = '-';
         string[i] = '\0';
     }

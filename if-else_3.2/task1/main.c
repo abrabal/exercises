@@ -2,31 +2,31 @@
 
 int binsearch(int x, int v[], int n)
 {
-int low = 0;
-int high = n - 1;
-int mid = (low + high)/2;
+    int low = 0;
+    int high = n - 1;
+    int mid = (low + high)/2;
 
-while (low < high && x != v[mid]){
+    while (low < high && x != v[mid]){
 
-if (x < v[mid])
-high = mid - 1;
+        if (x < v[mid])
+            high = mid - 1;
 
-else
-low = mid + 1;
+        else
+            low = mid + 1;
 
-mid = (low+high)/2;
+            mid = (low+high)/2;
 
-}
+    }
 
-if (x == v[mid]){
-    return mid;
+    if (x == v[mid]){
+        return mid;
 
-} else {
+    } else {
+        return -1;
+
+    }
+
     return -1;
-
-}
-
-return -1;
 }
 
 int main()
