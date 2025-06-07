@@ -2,7 +2,8 @@
 
 # Compiler and flags
 CC := cc
-CFLAGS := -Wall -Wextra -g
+CFLAGS := -Wall -Wextra -g -fsanitize=address
+LDFLAGS := -lm
 
 # Find all main.c files
 SOURCES := $(wildcard */*/main.c)
@@ -16,7 +17,7 @@ all: $(BINARIES)
 
 # Rule to build each binary
 %: %.c
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
 	@for bin in $(BINARIES); do \
