@@ -8,27 +8,21 @@ int convert_whitespace_to_char(char source_str[], char dest_str[]){
     int j = 0;
     
     for(int i = 0; i < line_length; j++){
-        switch (source_str[i]){
-            case '\\':
-                if (source_str[i + 1] == 't'){
-                    dest_str[j] = '\t';
-                    i += 2;
-                    break;
-                } else if (source_str[i + 1] == 'n'){
-                    dest_str[j] = '\n';
-                    return 0;
-                    break;
-                } else {
-                    dest_str[j] = source_str[i];
-                    i++;
-                    break;
-                }
-            default:
+       if (source_str[i] == '\\'){
+            if(source_str[i + 1] == 't'){
+                dest_str[j] = '\t';
+                i += 2;
+            } else if (source_str[i + 1] == 'n'){
+                dest_str[j] = '\n';
+                return 0;
+            } else {
                 dest_str[j] = source_str[i];
                 i++;
-                break;
-                
-        }
+            }
+       } else {
+            dest_str[j] = source_str[i];
+            i++;
+       }
     }
     return 0;
 }

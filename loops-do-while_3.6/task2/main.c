@@ -21,14 +21,7 @@ void num_to_string(int n, char string[], int b)
     unsigned int numb = 0;
     int i = 0;
 
-    if (n < 0)
-    {
-        numb = -n;
-    }
-    else
-    {
-        numb = n;
-    }
+    numb = (n < 0) ? -n : n;
 
     do
     {
