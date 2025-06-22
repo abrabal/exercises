@@ -10,9 +10,10 @@
 #define POW 1
 #define SQRT 2
 #define SIN 3
-#define EXIT -2
 #define VAR 4
 #define LAST_RESULT 5
+#define VARIABLES 26
+#define EXIT -2
 #define EXIT_VAR -3
 
 
@@ -20,7 +21,7 @@ int stack_pointer = 0;
 double stack[MAXSTACKSIZE] = {0};
 int ins_point = 0;
 double top_stack_el[MAXOP] = {0};
-double varriables_arr[26] = {0};
+double varriables_arr[VARIABLES] = {0};
 int variable = 0;
 double lres = 0;
 
