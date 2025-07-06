@@ -1,0 +1,5 @@
+// This is a comment with keyword while
+char *str = "for if while";
+int x = 0; /* auto break const */
+#define WHILE 10
+while (x < 5) x++;
