@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+#define PROGRAM int main()\
+    {\
+    printf("Hello World\n");\
+    }
+
+PROGRAM
